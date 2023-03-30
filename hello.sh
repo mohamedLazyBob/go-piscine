@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Hello mlastmock103!"
+echo "Hello mlazy!"
