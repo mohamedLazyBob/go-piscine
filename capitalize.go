@@ -11,7 +11,7 @@ func Capitalize(s string) string {
 			first = false
 		} else if IsUpper(string(runes[i])) {
 			runes[i] += 32
-		} else if !isLetter(runes[i]) {
+		} else if !isAlphanumeric(runes[i]) {
 			first = true
 		}
 	}
@@ -19,5 +19,13 @@ func Capitalize(s string) string {
 }
 
 func isLetter(s rune) bool {
-	return (s >= 'a' && s <= 'z') || (s >= 'A' && s <= 'Z')
+	return (s >= 'A' && s <= 'Z') || (s >= 'a' && s <= 'z')
+}
+
+func isDigit(s rune) bool {
+	return s >= '0' && s <= '9'
+}
+
+func isAlphanumeric(s rune) bool {
+	return isLetter(s) || isDigit(s)
 }
