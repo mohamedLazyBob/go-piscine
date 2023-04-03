@@ -33,7 +33,7 @@ func printNumber(number int) {
 
 func printStr(s string) {
 	for _, c := range s {
-		z01.PrintRune(rune(c))
+		z01.PrintRune(c)
 	}
 }
 
