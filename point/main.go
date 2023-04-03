@@ -12,22 +12,31 @@ func setPoint(ptr *point) {
 	ptr.y = 21
 }
 
-func printNumber(point int) {
-	a := '0'
-	for i := 0; i < point/10; i++ {
-		a++
+func printNumber(number int) {
+	c := '0'
+	u := '0'
+	sign := 1
+	if number < 0 {
+		z01.PrintRune('-')
+		sign = -1
 	}
-	z01.PrintRune(a)
-	b := '0'
-	for i := 0; i < point%10; i++ {
-		b++
+	signedNumber := number * sign
+	for i := 0; i < signedNumber/10; i++ {
+		c++
 	}
-	z01.PrintRune(b)
+	z01.PrintRune(c)
+	for i := 0; i < signedNumber%10; i++ {
+		u++
+	}
+	z01.PrintRune(u)
 }
 
 func main() {
 	points := &point{}
 	setPoint(points)
+
+	// fmt.Printf("x = %d, y = %d\n",points.x, points.y)
+
 	z01.PrintRune('x')
 	z01.PrintRune(' ')
 	z01.PrintRune('=')
