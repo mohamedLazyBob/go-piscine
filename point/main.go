@@ -32,8 +32,8 @@ func printNumber(number int) {
 }
 
 func printStr(s string) {
-	for i := 0; i < len(s); i++ {
-		z01.PrintRune(rune(s[i]))
+	for c := range s {
+		z01.PrintRune(rune(c))
 	}
 }
 
@@ -45,5 +45,5 @@ func main() {
 	printNumber(points.x)
 	printStr(", y = ")
 	printNumber(points.y)
-	z01.PrintRune('\n')
+	printStr("\n")
 }
