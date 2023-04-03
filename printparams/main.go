@@ -14,6 +14,7 @@ func printStrln(s string) {
 	}
 	z01.PrintRune('\n')
 }
+
 func main() {
 	for i := 1; i < len(os.Args); i++ {
 		printStrln(os.Args[i])
