@@ -7,13 +7,13 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func printStr(s string) {
-	for i := 0; i < len(s); i++ {
-		z01.PrintRune(rune(s[i]))
-	}
-}
-
 func main() {
-	printStr(os.Args[0][2:])
-	printStr("\n")
+	ss := []rune(os.Args[0])
+
+	for i := range ss {
+		if i > 1 {
+			z01.PrintRune(ss[i])
+		}
+	}
+	z01.PrintRune('\n')
 }
