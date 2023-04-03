@@ -18,6 +18,7 @@ func toLower(s rune) rune {
 	}
 	return s
 }
+
 func toUpper(s rune) rune {
 	if s >= 'a' && s <= 'z' {
 		return s - 32
