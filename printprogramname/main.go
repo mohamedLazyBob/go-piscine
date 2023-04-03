@@ -3,10 +3,17 @@ package main
 
 import (
 	"os"
-	"piscine"
+
+	"github.com/01-edu/z01"
 )
 
+func printStr(s string) {
+	for i := 0; i < len(s); i++ {
+		z01.PrintRune(rune(s[i]))
+	}
+}
+
 func main() {
-	piscine.PrintStr(os.Args[0])
-	piscine.PrintStr("\n")
+	printStr(os.Args[0])
+	printStr("\n")
 }
