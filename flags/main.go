@@ -10,6 +10,7 @@ import (
 func Show() {
 	fmt.Print("--insert\n  -i\n\t This flag inserts the string into the string passed as argument.\n--order\n  -o\n\t This flag will behave like a boolean, if it is called it will order the argument.")
 }
+
 func Sort(s string) {
 	var a [19999]int
 	for _, c := range s {
@@ -23,6 +24,7 @@ func Sort(s string) {
 	}
 	z01.PrintRune('\n')
 }
+
 func main() {
 	arg := os.Args[1:]
 	ans := ""
