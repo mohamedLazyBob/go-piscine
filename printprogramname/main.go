@@ -14,7 +14,6 @@ func printStr(s string) {
 }
 
 func main() {
-	// skip ./ at the beggining	of the path
 	printStr(os.Args[0][2:])
 	printStr("\n")
 }
