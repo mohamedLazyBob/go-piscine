@@ -31,23 +31,19 @@ func printNumber(number int) {
 	z01.PrintRune(u)
 }
 
+func PrintStr(s string) {
+	for i := 0; i < len(s); i++ {
+		z01.PrintRune(rune(s[i]))
+	}
+}
+
 func main() {
 	points := &point{}
 	setPoint(points)
 
-	// fmt.Printf("x = %d, y = %d\n",points.x, points.y)
-
-	z01.PrintRune('x')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
+	PrintStr("x = ")
 	printNumber(points.x)
-	z01.PrintRune(',')
-	z01.PrintRune(' ')
-	z01.PrintRune('y')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
+	PrintStr(", y = ")
 	printNumber(points.y)
 	z01.PrintRune('\n')
 }
