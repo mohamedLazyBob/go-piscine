@@ -11,7 +11,8 @@ func Capitalize(s string) string {
 			first = false
 		} else if IsUpper(string(runes[i])) {
 			runes[i] += 32
-		} else if !isAlphanumeric(runes[i]) {
+		} 
+		if isAlphanumeric(runes[i]) {
 			first = true
 		}
 	}
