@@ -1,10 +1,14 @@
-#   All my answers & notes at ZONE01 DAKAR 2nd Piscine
+# GoLang 01 talent Piscine solution
 
-##  Quest 01
-[Here](docs/quest01.md) is my answers and notes for the quest 1.
+## How to contribute
 
-##  Quest 02
-[Here](docs/quest02.md) is my answers and notes for the quest 2.
+1. Create a new branch
+2. Commit your changes
+3. Push to the branch
+4. Create a new Pull Request
 
-##  Quest 03
-[Here](docs/quest03.md) is my answers and notes for the quest 3.
+## Acknowledgments
+
+
+## Author
+
