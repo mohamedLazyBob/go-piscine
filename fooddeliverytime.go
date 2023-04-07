@@ -1,8 +1,8 @@
 package piscine
 
 type food struct {
-	orders  	string
-	preptime	int
+	orders   string
+	preptime int
 }
 
 func SetFood(ptr *food) {
@@ -25,4 +25,3 @@ func FoodDeliveryTime(order string) int {
 	SetFood(food)
 	return food.preptime
 }
-
