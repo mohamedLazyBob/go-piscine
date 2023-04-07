@@ -1,9 +1,9 @@
 package piscine
 
-func StringToIntSlice(s string) []int {
-	var sliced []int
-	for i := range s {
-		sliced = append(sliced, int(s[i]))
+func StringToIntSlice(str string) []int {
+	var result []int
+	for _, c := range str {
+		result = append(result, int(c))
 	}
-	return sliced
+	return result
 }
