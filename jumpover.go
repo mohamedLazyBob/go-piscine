@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func JumpOver(str string) string {
 	out := ""
