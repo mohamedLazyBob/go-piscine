@@ -19,6 +19,13 @@ func LoafOfBread(str string) string {
 			}
 			i++
 		}
+		// remove trailing spaces
+		for i := len(skip) - 1; i >= 0; i-- {
+			if skip[i] != ' ' {
+				skip = skip[:i+1]
+				break
+			}
+		}
 		return skip + "\n"
 	}
 }
