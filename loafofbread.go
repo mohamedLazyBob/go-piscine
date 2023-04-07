@@ -1,7 +1,9 @@
 package piscine
 
 func LoafOfBread(str string) string {
-	if len(str) < 5 {
+	if len(str) == 0 {
+		return "\n"
+	} else if len(str) < 5 {
 		return "Invalid Output\n"
 	} else {
 		skip := ""
