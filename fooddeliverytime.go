@@ -6,7 +6,6 @@ type food struct {
 }
 
 func SetFood(ptr *food) {
-
 	if ptr.orders == "burger" {
 		ptr.preptime = 15
 	} else if ptr.orders == "chips" {
@@ -19,7 +18,6 @@ func SetFood(ptr *food) {
 }
 
 func FoodDeliveryTime(order string) int {
-
 	food := &food{}
 	food.orders = order
 	SetFood(food)
