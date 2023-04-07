@@ -4,7 +4,7 @@ func FoldInt(f func(int, int) int, a []int, n int) {
 	for _, el := range a {
 		n = f(n, el)
 	}
-	PrintStr(itoa(n))
+	PrintStr(Itoa(n))
 }
 
 func Add(x, y int) int {
