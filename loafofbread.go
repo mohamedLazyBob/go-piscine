@@ -1,34 +1,22 @@
 package piscine
 
-import "strings"
-
 func LoafOfBread(str string) string {
-	if str == "" {
-		return "\n"
-	}
 	if len(str) < 5 {
 		return "Invalid Output\n"
-	}
-	var _str strings.Builder
-	j := 0
-	for i := 0; i < len(str); i++ {
-		if j < 5 && rune(str[i]) == ' ' {
-			continue
-		}
-		if j == 5 {
-			if i != len(str)-1 && str[i+1] == ' ' {
+	} else {
+		skip := ""
+		i := 0
+		for _, e := range str {
+			if i%6 != 5 && e == ' ' {
 				continue
 			}
-			if i == len(str)-1 {
-				break
+			if i%6 == 5 {
+				skip += " "
+			} else {
+				skip += string(e)
 			}
-			_str.WriteRune(' ')
-			j = 0
-			continue
+			i++
 		}
-		_str.WriteRune(rune(str[i]))
-		j++
+		return skip + "\n"
 	}
-	_str.WriteRune(rune('\n'))
-	return (_str.String())
 }

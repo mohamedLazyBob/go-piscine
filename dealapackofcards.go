@@ -1,32 +1,18 @@
 package piscine
 
-import (
-	"github.com/01-edu/z01"
-)
+import "fmt"
 
 func DealAPackOfCards(deck []int) {
-	lastCard := 0
-	for i := 0; i < 4; i++ {
-		printStr("Player " + itoa(i+1) + ": ")
-		for i := lastCard; i < lastCard+3; i++ {
-			printStr(itoa(deck[i]))
-			if i != lastCard+2 {
-				printStr(", ")
+	for i := 0; i < 12; i += 3 {
+		player := i/3 + 1
+		end := i + 3
+		fmt.Printf("Player %d: ", player)
+		for i, card := range deck[i:end] {
+			fmt.Printf("%d", card)
+			if i != 2 {
+				fmt.Printf(", ")
 			}
 		}
-		z01.PrintRune('\n')
-		lastCard += 3
+		fmt.Printf("\n")
 	}
-}
-
-func itoa(n int) string {
-	number := []rune(nil)
-	for n != 0 {
-		number = append(number, rune((n%10)+48))
-		n /= 10
-	}
-	for i := 0; i < len(number)/2; i++ {
-		number[i], number[len(number)-i-1] = number[len(number)-i-1], number[i]
-	}
-	return string(number)
 }
