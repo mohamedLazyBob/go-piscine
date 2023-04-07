@@ -1,6 +1,5 @@
 package piscine
 
-
 func StringToIntSlice(s string) []int {
 	var sslice []int
 	for i, _ := range s {
